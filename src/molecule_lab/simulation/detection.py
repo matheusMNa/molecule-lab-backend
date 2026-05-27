@@ -6,12 +6,16 @@ import math
 
 import numpy as np
 
+# TODO:
+# Recalibrate rupture criterion after
+# environment-specific bond energetics are available.
+
 
 def detect_broken_bonds(
     pos: np.ndarray,
     bonds: list[tuple[int, int, float, float, float]],
     break_frac: float,
-    break_distance_factor: float,
+    break_distance_factor: float = 1.6,
 ) -> list[dict[str, float | int | str]]:
     """Detect bonds that have become chemically implausibly stretched.
 
@@ -22,7 +26,7 @@ def detect_broken_bonds(
     tail of the Morse potential.
     """
     broken: list[dict[str, float | int | str]] = []
-    for idx, (i, j, r0, de, alpha) in enumerate(bonds):
+    for idx, (i, j, r0, de, alpha, *_) in enumerate(bonds):
         r = np.linalg.norm(pos[i] - pos[j])
         if r <= r0:
             continue
@@ -34,7 +38,21 @@ def detect_broken_bonds(
 
         energy_trigger = fraction >= break_frac
         distance_trigger = distance_ratio >= break_distance_factor
-        if energy_trigger or distance_trigger:
+        if energy_trigger and distance_trigger:
+            print(
+                "BREAK DETECTED",
+                {
+                    "bond": (i, j),
+                    "distance": r,
+                    "r0": r0,
+                    "distance_ratio": distance_ratio,
+                    "De": de,
+                    "fraction": fraction,
+                    "energy_trigger": energy_trigger,
+                    "distance_trigger": distance_trigger,
+                }
+            )
+
             if energy_trigger and distance_trigger:
                 reason = "energy_and_distance"
             elif energy_trigger:
