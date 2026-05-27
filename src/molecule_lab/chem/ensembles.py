@@ -17,7 +17,7 @@ from rdkit import Chem
 def extract_local_environment(
         mol: Chem.Mol,
         bond: Chem.Bond,
-        size: int = 5,
+        size: int = 3,
 ) -> list[int]:
     """Extrai um ambiente determinístico local ao redor de uma ligação.
     O ambiente sempre contém os dois átomos da ligação;

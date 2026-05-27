@@ -20,7 +20,7 @@ def test_env_size_limit():
 
 	env = extract_local_environment(mol, bond)
 
-	assert len(env) <= 5
+	assert len(env) <= 3
 
 
 def test_env_is_deterministic():
