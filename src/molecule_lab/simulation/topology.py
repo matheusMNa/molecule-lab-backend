@@ -1,7 +1,6 @@
 """RDKit structure building and topology extraction."""
 
 from __future__ import annotations
-
 import math
 from dataclasses import dataclass
 
@@ -18,6 +17,19 @@ from molecule_lab.simulation.parameters import (
     bond_morse_parameters,
 )
 
+from molecule_lab.chem.ensembles import (
+    extract_local_environment,
+    canonical_environment_signature,
+)
+
+from molecule_lab.chem.rupture_database import (
+    RuptureDatabase,
+)
+
+RUPTURE_DB = RuptureDatabase.from_json(
+    #substituir por aquivo do felipe
+    "tests/data/test_rupture_db.json"
+)
 
 @dataclass
 class Topology:
@@ -26,7 +38,7 @@ class Topology:
     radii: np.ndarray
     symbols: list[str]
     charges: np.ndarray
-    bonds: list[tuple[int, int, float, float, float]]
+    bonds: list[tuple[int, int, float, float, float, str, str]]
     bonded_pairs: set[tuple[int, int]]
     one_three: set[tuple[int, int]]
     one_four: set[tuple[int, int]]
@@ -106,15 +118,36 @@ def build_topology(mol: Chem.Mol) -> Topology:
         dtype=float,
     )
 
-    bonds: list[tuple[int, int, float, float, float]] = []
+    bonds: list[tuple[int, int, float, float, float, str, str]] = []
     neighbors = {i: set() for i in range(mol.GetNumAtoms())}
     bond_bt_map = {}
     for bond in mol.GetBonds():
+
         i, j = bond.GetBeginAtomIdx(), bond.GetEndAtomIdx()
         r0 = float(np.linalg.norm(pos[j] - pos[i]))
-        de, kh = bond_morse_parameters(symbols[i], symbols[j], bond.GetBondType())
+
+
+        env = extract_local_environment(mol, bond)
+        
+        signature = canonical_environment_signature(
+            mol,
+            env
+        )
+        generic_de, kh = bond_morse_parameters(
+            symbols[i],
+            symbols[j],
+            bond.GetBondType(),
+        )
+        
+        try:
+            de = RUPTURE_DB.get_energy(signature)
+            source = "database"
+        except KeyError:
+            de = generic_de
+            source = "fallback"
+  
         alpha = math.sqrt(max(kh, 1e-12) / (2.0 * max(de, 1e-12)))
-        bonds.append((i, j, r0, de, alpha))
+        bonds.append((i, j, r0, de, alpha, signature, source))
         neighbors[i].add(j)
         neighbors[j].add(i)
         bond_bt_map[(min(i, j), max(i, j))] = bond.GetBondType()
@@ -166,7 +199,7 @@ def build_topology(mol: Chem.Mol) -> Topology:
     # by default. If enabled, X-H bonds cannot break.
     shake_bonds = [
         (i, j, r0)
-        for i, j, r0, _de, _alpha in bonds
+        for i, j, r0, _de, _alpha, *_ in bonds
         if symbols[i] == "H" or symbols[j] == "H"
     ]
     bond_arrays = _bond_arrays(bonds)
@@ -207,7 +240,7 @@ def build_topology(mol: Chem.Mol) -> Topology:
 
 
 def _bond_arrays(
-    bonds: list[tuple[int, int, float, float, float]],
+    bonds: list[tuple[int, int, float, float, float, str, str]],
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
     if not bonds:
         return (
