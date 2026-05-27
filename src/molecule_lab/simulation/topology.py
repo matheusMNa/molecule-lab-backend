@@ -127,7 +127,7 @@ def build_topology(mol: Chem.Mol) -> Topology:
         r0 = float(np.linalg.norm(pos[j] - pos[i]))
 
 
-        env = extract_local_environment(mol, bond)
+        env = extract_local_environment(mol, bond, size=3)
         
         signature = canonical_environment_signature(
             mol,
