@@ -1,76 +1,83 @@
-"""Bond breaking detection."""
+"""Bond breaking detection via temperature threshold."""
 
 from __future__ import annotations
-
 import math
-
 import numpy as np
-
-# TODO:
-# Recalibrate rupture criterion after
-# environment-specific bond energetics are available.
 
 
 def detect_broken_bonds(
     pos: np.ndarray,
     bonds: list[tuple[int, int, float, float, float]],
-    break_frac: float,
+    current_temperature: float,
     break_distance_factor: float = 1.6,
-) -> list[dict[str, float | int | str]]:
-    """Detect bonds that have become chemically implausibly stretched.
+) -> list[dict]:
+    """Detect bonds that have exceeded their rupture temperature threshold.
 
-    The original criterion used only V > break_frac * D_e. With a Morse
-    potential, using a high fraction such as 0.95 detects rupture only at very
-    large separations. This detector combines an energy criterion with a
-    distance criterion, which makes the result less dependent on the asymptotic
-    tail of the Morse potential.
+    The rupture criterion is purely thermal: a bond breaks when the current
+    simulation temperature meets or exceeds the threshold temperature stored
+    in the bond's ``de`` field (which now holds ``temperatura_K`` from the
+    professor's database).
+
+    Bonds with a negative threshold (spontaneously unstable) are always
+    considered broken, regardless of the current temperature.
+
+    A secondary distance guard (``break_distance_factor``) is kept to avoid
+    flagging bonds that are thermally above threshold but geometrically intact
+    — this prevents false positives during the early heating ramp.
+
+    Parameters
+    ----------
+    pos:
+        Atom positions array of shape ``(n_atoms, 3)``.
+    bonds:
+        List of bond tuples ``(i, j, r0, rupture_temp_K, alpha, ...)``.
+        ``rupture_temp_K`` occupies the slot formerly used by Morse ``De``.
+    current_temperature:
+        Instantaneous kinetic temperature of the simulation in Kelvin.
+    break_distance_factor:
+        Bond is only declared broken if ``r / r0 >= break_distance_factor``
+        *or* the rupture threshold is negative (spontaneous instability).
+
+    Returns
+    -------
+    list[dict]
+        One entry per broken bond with diagnostic fields.
     """
-    broken: list[dict[str, float | int | str]] = []
-    for idx, (i, j, r0, de, alpha, *_) in enumerate(bonds):
-        r = np.linalg.norm(pos[i] - pos[j])
-        if r <= r0:
+    broken: list[dict] = []
+
+    for idx, (i, j, r0, rupture_temp, alpha, *_) in enumerate(bonds):
+        spontaneous = rupture_temp < 0.0
+        temp_trigger = spontaneous or (current_temperature >= rupture_temp)
+
+        if not temp_trigger:
             continue
 
-        u = math.exp(-alpha * (r - r0))
-        potential = de * (1 - u) ** 2
-        fraction = potential / de if de > 0 else 0.0
-        distance_ratio = r / r0 if r0 > 0 else math.inf
-
-        energy_trigger = fraction >= break_frac
+        r = float(np.linalg.norm(pos[i] - pos[j]))
+        distance_ratio = r / r0 if r0 > 0 else float("inf")
         distance_trigger = distance_ratio >= break_distance_factor
-        if energy_trigger and distance_trigger:
-            print(
-                "BREAK DETECTED",
-                {
-                    "bond": (i, j),
-                    "distance": r,
-                    "r0": r0,
-                    "distance_ratio": distance_ratio,
-                    "De": de,
-                    "fraction": fraction,
-                    "energy_trigger": energy_trigger,
-                    "distance_trigger": distance_trigger,
-                }
-            )
 
-            if energy_trigger and distance_trigger:
-                reason = "energy_and_distance"
-            elif energy_trigger:
-                reason = "energy"
-            else:
-                reason = "distance"
-            broken.append(
-                {
-                    "bond_index": idx,
-                    "i": i,
-                    "j": j,
-                    "distance": float(r),
-                    "r0": float(r0),
-                    "distance_ratio": float(distance_ratio),
-                    "V": float(potential),
-                    "De": float(de),
-                    "fraction": float(fraction),
-                    "reason": reason,
-                }
-            )
+        # Spontaneously unstable bonds bypass the distance guard.
+        if not (distance_trigger or spontaneous):
+            continue
+
+        reason = "spontaneous" if spontaneous else "temperature_threshold"
+
+        broken.append(
+            {
+                "bond_index": idx,
+                "i": i,
+                "j": j,
+                "distance": r,
+                "r0": float(r0),
+                "distance_ratio": float(distance_ratio),
+                "rupture_temp_K": float(rupture_temp),
+                "current_temp_K": float(current_temperature),
+                # Keep legacy key names so engine._format_broken_bonds works
+                # without changes (V and De are repurposed for display).
+                "V": float(current_temperature),
+                "De": float(rupture_temp),
+                "reason": reason,
+            }
+        )
+
     return broken

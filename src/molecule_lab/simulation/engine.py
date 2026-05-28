@@ -127,7 +127,7 @@ def _run_uncached(
         broken_now = detect_broken_bonds(
             pos,
             topology.bonds,
-            preset.break_frac,
+            current_temperature,
             preset.break_distance_factor,
         )
         active = {int(entry["bond_index"]) for entry in broken_now}
@@ -221,6 +221,13 @@ def _format_broken_bonds(
     for bond in broken_bonds:
         i = int(bond["i"])
         j = int(bond["j"])
+        rupture_temp = float(bond["De"])   # De slot now holds rupture_temp_K
+        current_temp = float(bond["V"])    # V  slot now holds current_temp_K
+        temp_fraction = (
+            round(current_temp / rupture_temp, 3)
+            if rupture_temp > 0
+            else float("inf")
+        )
         output.append(
             {
                 "atom_i": symbols[i],
@@ -230,8 +237,12 @@ def _format_broken_bonds(
                 "distance": round(float(bond["distance"]), 3),
                 "r0": round(float(bond["r0"]), 3),
                 "distance_ratio": round(float(bond.get("distance_ratio", 0.0)), 3),
-                "fraction": round(float(bond["V"]) / float(bond["De"]), 3),
-                "De": round(float(bond["De"]), 3),
+                "rupture_temp_K": round(rupture_temp, 1),
+                "current_temp_K": round(current_temp, 1),
+                "temp_fraction": temp_fraction,
+                # Legacy keys kept for API consumers that may still read them.
+                "De": round(rupture_temp, 1),
+                "fraction": temp_fraction,
                 "reason": str(bond.get("reason", "unknown")),
             }
         )
