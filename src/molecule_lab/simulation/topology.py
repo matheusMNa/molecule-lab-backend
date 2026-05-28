@@ -145,8 +145,8 @@ def build_topology(mol: Chem.Mol) -> Topology:
         except KeyError:
             de = generic_de
             source = "fallback"
-  
-        alpha = math.sqrt(max(kh, 1e-12) / (2.0 * max(de, 1e-12)))
+        
+        alpha = math.sqrt(max(kh, 1e-12) / (2.0 * max(generic_de, 1e-12))) 
         bonds.append((i, j, r0, de, alpha, signature, source))
         neighbors[i].add(j)
         neighbors[j].add(i)

@@ -72,6 +72,7 @@ src/
     __init__.py
 tests/
   data/
+    rupture_db.json
     test_rupture_db.json
   test_api.py
   test_chemistry.py
@@ -89,6 +90,416 @@ README.md
 
 <files>
 This section contains the contents of the repository's files.
+
+<file path="tests/data/rupture_db.json">
+{
+  "BrBr": 27985.077005268922,
+  "BrBrBr": 11408.494051916621,
+  "BrCBr": 36582.919596779444,
+  "BrClBr": 8604.113914541053,
+  "BrFBr": 2207.523657627255,
+  "BrNBr": 43955.60304390361,
+  "BrOBr": 19428.264882461543,
+  "BrPBr": 49529.95423382514,
+  "BrSBr": 27334.5230082002,
+  "Br[H]Br": 4289.568594214592,
+  "CBrBr": 14456.571949284637,
+  "CBrF": 25720.63432572048,
+  "CBrN": -1729.9226235873505,
+  "CBrO": 16615.773961090796,
+  "CBrP": -1664.3661018839427,
+  "CBrS": 9263.635966045833,
+  "CCBr": 54128.76434546576,
+  "CCF": 72263.19564916087,
+  "CCN": 90444.95890480636,
+  "CCO": 88866.21903544645,
+  "CCP": 72092.7828117621,
+  "CCS": 67133.99304504938,
+  "CClBr": 12525.758048239531,
+  "CClF": 22436.48493233144,
+  "CClN": -1931.9644025081934,
+  "CClO": 12308.31091114698,
+  "CClP": -4201.642644162639,
+  "CClS": 4249.209525867175,
+  "CFBr": 2932.667868841032,
+  "CFF": 7856.528672286173,
+  "CFN": -34161.74103991111,
+  "CFO": 88937.2419253463,
+  "CFP": -21775.765772040795,
+  "CFS": 56808.388638290875,
+  "CNBr": 30266.464986432773,
+  "CNF": 34270.553732780834,
+  "CNN": 37265.57261342553,
+  "CNO": 47720.6844900215,
+  "CNP": 31832.81134700057,
+  "CNS": 41204.676348221175,
+  "COBr": 586.1172168393622,
+  "COF": 27678.426060934446,
+  "CON": -17912.810288621487,
+  "COO": -8059.422658584945,
+  "COP": -12475.62145500789,
+  "COS": -6784.4417814251865,
+  "CPBr": 19468.727764268668,
+  "CPF": 36630.64453303619,
+  "CPN": 17853.916804688397,
+  "CPO": 44075.56593665545,
+  "CPP": 13993.21867940395,
+  "CPS": 28452.474947603143,
+  "CSBr": 3949.2657816838223,
+  "CSF": 15177.22241468519,
+  "CSN": 1774.023891049095,
+  "CSO": 21564.05846815536,
+  "CSP": -1432.2960053179454,
+  "CSS": 8969.157587997186,
+  "C[H]Br": 45611.30671109923,
+  "C[H]F": 69545.9756581419,
+  "C[H]N": 112066.98435942185,
+  "C[H]O": 83593.94692437584,
+  "C[H]P": 86668.16955237622,
+  "C[H]S": 76154.71713757757,
+  "ClBrBr": 11716.742618026357,
+  "ClCBr": 35957.18109285749,
+  "ClClBr": 8729.281161205052,
+  "ClFBr": 3066.341408490243,
+  "ClNBr": 43550.64415625208,
+  "ClOBr": 18638.410414789156,
+  "ClPBr": 50299.802857277275,
+  "ClSBr": 27621.38704793577,
+  "Cl[H]Br": 3978.038346955744,
+  "FBr": 34308.96886219584,
+  "FBrBr": 13254.919912067564,
+  "FBrCl": 20277.18312522078,
+  "FBrF": 23189.31336131666,
+  "FBrP": 19394.52156956199,
+  "FBrS": 18319.614490376025,
+  "FCBr": 37083.27455445367,
+  "FCCl": 63350.41617132148,
+  "FCF": 66685.52950924024,
+  "FCP": 63311.67117383886,
+  "FCS": 41302.24683350322,
+  "FClBr": 9673.613111537243,
+  "FClCl": 14478.56703320805,
+  "FClF": 17245.987118808935,
+  "FClP": 19665.120501862875,
+  "FClS": 13221.412003225902,
+  "FF": 26971.176974229984,
+  "FFBr": 3237.993379107984,
+  "FFCl": 2665.1320102007885,
+  "FFF": 2166.042683157858,
+  "FFP": 76638.52787885425,
+  "FFS": -2671.7720724936403,
+  "FNBr": 46811.780877855745,
+  "FNCl": 58049.14224651688,
+  "FNF": 63824.351295614644,
+  "FNP": 14141.518593265675,
+  "FNS": 31870.782789133245,
+  "FOBr": 20776.496869775285,
+  "FOCl": 21949.044529257077,
+  "FOF": 25266.217355117777,
+  "FOP": 12490.625244790832,
+  "FOS": 25926.3335815232,
+  "FP": 39811.37974418122,
+  "FPBr": 53461.55951457627,
+  "FPCl": 72139.75574972264,
+  "FPF": 76649.05611914939,
+  "FPP": 35694.142036546735,
+  "FPS": 58252.15231522234,
+  "FS": 44956.08259958941,
+  "FSBr": 29626.878004934537,
+  "FSCl": 41974.882751457524,
+  "FSF": 45552.01231343999,
+  "FSP": 34153.89941011896,
+  "FSS": 36044.673544604004,
+  "F[H]Br": 3009.9628702313407,
+  "F[H]Cl": 19186.202001435064,
+  "F[H]F": 6196.623020907548,
+  "F[H]P": -6672.370032011425,
+  "F[H]S": 18122.188764660095,
+  "NBr": 13793.508745213196,
+  "NBrBr": 15085.07387777476,
+  "NBrCl": 16150.762225470608,
+  "NBrF": 19968.21847092303,
+  "NBrN": 19183.17256040267,
+  "NBrO": 18685.71107927966,
+  "NBrP": 65011.15879993686,
+  "NBrS": 8517.301605962126,
+  "NCBr": 48786.41283868614,
+  "NCCl": 98556.51158522815,
+  "NCF": 67838.34251052473,
+  "NCN": 48614.37678092363,
+  "NCO": 40183.0671927156,
+  "NCP": 39306.74638314394,
+  "NCS": 56576.74791913084,
+  "NClBr": 16068.14963291963,
+  "NClCl": 17115.395321726326,
+  "NClF": 21305.61338497648,
+  "NClN": 19306.600318606277,
+  "NClO": 19626.87963321178,
+  "NClP": 7008.3359768198425,
+  "NClS": 6237.183369526091,
+  "NF": 25119.575321430424,
+  "NFBr": 15683.888296483578,
+  "NFCl": 16953.231575746522,
+  "NFF": 25496.325086319353,
+  "NFN": 96903.83674902534,
+  "NFO": -14044.086655879992,
+  "NFP": 67898.77542837146,
+  "NFS": -18284.653078256062,
+  "NN": 119800.01481112244,
+  "NNBr": 991.3870482727369,
+  "NNCl": 103025.62219044138,
+  "NNF": 2223.248145942001,
+  "NNN": 18154.803754498225,
+  "NNO": 34826.21973145165,
+  "NNP": 6474.08265005299,
+  "NNS": 18791.825623190696,
+  "NO": 85767.47433958697,
+  "NOBr": 11113.096460158436,
+  "NOCl": 62098.819320476396,
+  "NOF": 19154.111497811868,
+  "NON": 15476.400882697855,
+  "NOO": 5548.638377412379,
+  "NOP": 10160.206881666547,
+  "NOS": 3758.5603249509118,
+  "NP": 75343.37469346363,
+  "NPBr": 11989.191450568824,
+  "NPCl": 65222.23415771344,
+  "NPF": 32457.63812162299,
+  "NPN": 15820.15122376122,
+  "NPO": 43091.760424188804,
+  "NPP": 9544.288619742078,
+  "NPS": 25548.172607331213,
+  "NS": 60628.16970533559,
+  "NSBr": 26196.277360345182,
+  "NSCl": 54404.22531140644,
+  "NSF": 44083.72744910623,
+  "NSN": 30048.14223527842,
+  "NSO": 43055.51891230218,
+  "NSP": 20805.820192597595,
+  "NSS": 25578.669983639465,
+  "N[H]Br": 28884.516537582575,
+  "N[H]Cl": 26761.80460908789,
+  "N[H]F": -11939.803162063183,
+  "N[H]N": 107533.24085200789,
+  "N[H]O": 57780.00097875375,
+  "N[H]P": 81891.94751960499,
+  "N[H]S": 49743.14911435484,
+  "OBr": 34512.213372350954,
+  "OBrBr": 13605.406370497753,
+  "OBrCl": 21165.483596080292,
+  "OBrF": 24759.903596442993,
+  "OBrO": 31309.453403431755,
+  "OBrP": 13906.101931056775,
+  "OBrS": 21533.730609690512,
+  "OCBr": 7534.032496734934,
+  "OCCl": 92862.2813162077,
+  "OCF": 27679.980859154537,
+  "OCO": 74678.96073360182,
+  "OCP": 23416.05579527096,
+  "OCS": 45257.151385605226,
+  "OClBr": 10240.09191962195,
+  "OClCl": 18631.576204892233,
+  "OClF": 19724.314689542898,
+  "OClO": 29044.744029744907,
+  "OClP": 10554.414193664816,
+  "OClS": 17414.18075247193,
+  "OF": 36294.61339454087,
+  "OFBr": -3764.69444076852,
+  "OFCl": -1007.2708912298061,
+  "OFF": -3810.8460055802584,
+  "OFO": -7923.257858013692,
+  "OFP": -7839.383872242605,
+  "OFS": -10870.913307347579,
+  "ONBr": 22563.01975877343,
+  "ONCl": 93457.18440129326,
+  "ONF": 37683.14024967381,
+  "ONO": 49389.51538826525,
+  "ONP": 44600.58201816576,
+  "ONS": 30824.612754207355,
+  "OO": 72573.30275288734,
+  "OOBr": 7040.007731899082,
+  "OOCl": 44446.009366744875,
+  "OOF": 13904.974496803257,
+  "OOO": 18603.85126253548,
+  "OOP": 12719.533656122663,
+  "OOS": 10561.95970764358,
+  "OP": 72513.61533062457,
+  "OPBr": 40032.35689016216,
+  "OPCl": 91596.16515848337,
+  "OPF": 65224.00093633608,
+  "OPO": 62488.601138955746,
+  "OPP": 35675.251275378396,
+  "OPS": 41925.279911241254,
+  "OS": 51531.165992072325,
+  "OSBr": 39505.746452534164,
+  "OSCl": 58759.77592270596,
+  "OSF": 57606.16054556897,
+  "OSO": 75817.79458766773,
+  "OSP": 37983.61792509542,
+  "OSS": 49376.825484514506,
+  "O[H]Br": 30260.858033530036,
+  "O[H]Cl": 32142.124143602163,
+  "O[H]F": 16960.605727169972,
+  "O[H]O": 43579.37884798437,
+  "O[H]P": 36569.27447984822,
+  "O[H]S": 42709.08759451948,
+  "PBr": 22320.638693330417,
+  "PBrBr": 17473.655294539007,
+  "PBrP": 11010.106635390643,
+  "PBrS": 7447.260737605783,
+  "PCBr": 49889.40200520284,
+  "PCCl": 69075.1151300706,
+  "PCP": 48670.53905815483,
+  "PCS": 42121.873805594485,
+  "PClBr": 18488.02133023774,
+  "PClCl": 18787.264442137013,
+  "PClP": 16447.31372910506,
+  "PClS": 3679.3261838929147,
+  "PFBr": 53461.32495623795,
+  "PFCl": 64891.459890626706,
+  "PFP": 55826.69309820704,
+  "PFS": -6758.195269013918,
+  "PNBr": 6677.620486130535,
+  "PNCl": 65568.78639614538,
+  "PNP": 31561.419600813028,
+  "PNS": 39108.79217987476,
+  "POBr": 8171.905091431903,
+  "POCl": 44972.33580281567,
+  "POP": 19447.322358766236,
+  "POS": 12883.673586660405,
+  "PP": 59962.03247526938,
+  "PPBr": 16519.65894585715,
+  "PPCl": 54156.04627667966,
+  "PPP": 17552.13444980125,
+  "PPS": 31345.831474635732,
+  "PS": 54576.97836252604,
+  "PSBr": 20517.317668405194,
+  "PSCl": 41696.861166857285,
+  "PSP": 19778.111937189773,
+  "PSS": 23433.554560430664,
+  "P[H]Br": 27145.45530393405,
+  "P[H]Cl": 25693.91573212664,
+  "P[H]P": 52322.828521907315,
+  "P[H]S": 43404.926715620466,
+  "SBr": 33335.105948875025,
+  "SBrBr": 10253.058410550775,
+  "SBrCl": 16144.13316657887,
+  "SBrS": 15468.848322847965,
+  "SCBr": 20177.682840791047,
+  "SCCl": 60869.944150592826,
+  "SCS": 61099.02377865635,
+  "SClBr": 6782.938421294372,
+  "SClCl": 13930.494304720343,
+  "SClS": 10691.466434164682,
+  "SFBr": -2966.66055392092,
+  "SFCl": 8501.009399386248,
+  "SFS": -3962.626628260602,
+  "SNBr": 19551.848240896656,
+  "SNCl": 64682.77129331338,
+  "SNS": 40096.317412234515,
+  "SOBr": 21627.127715563227,
+  "SOCl": 37414.85410162364,
+  "SOS": 27422.7154353783,
+  "SPBr": 35418.64100328609,
+  "SPCl": 68460.94705631612,
+  "SPS": 40749.585698490424,
+  "SS": 55226.88600554118,
+  "SSBr": 20896.635217136693,
+  "SSCl": 43115.30660984527,
+  "SSS": 31357.385734284537,
+  "S[H]Br": 27396.464378920584,
+  "S[H]Cl": 24226.343638008828,
+  "S[H]S": 26510.55665666263,
+  "[H]Br": 47780.284514707084,
+  "[H]BrBr": 4599.221217942582,
+  "[H]BrC": 4955.263824641247,
+  "[H]BrCl": 24057.432741276054,
+  "[H]BrF": 24598.03462537774,
+  "[H]BrN": -6044.4752886569495,
+  "[H]BrO": 6256.336862178208,
+  "[H]BrP": -5173.02933914585,
+  "[H]BrS": 1134.058282535064,
+  "[H]Br[H]": -1237.3687219695069,
+  "[H]CBr": 42136.23387986265,
+  "[H]CC": 68642.8688430706,
+  "[H]CCl": 41241.85159362481,
+  "[H]CF": 39528.851769258545,
+  "[H]CN": 65787.42670488021,
+  "[H]CO": 14747.08159712644,
+  "[H]CP": 63322.53483474478,
+  "[H]CS": 30631.254050425516,
+  "[H]C[H]": 47933.890597318794,
+  "[H]ClBr": 3973.9556667703846,
+  "[H]ClC": 2448.96435472203,
+  "[H]ClCl": 28140.200074523567,
+  "[H]ClF": 19191.62866880916,
+  "[H]ClN": -9598.530355202409,
+  "[H]ClO": 1248.6555912097986,
+  "[H]ClP": -9148.237594362006,
+  "[H]ClS": -3143.2115383240157,
+  "[H]Cl[H]": -4214.84319182452,
+  "[H]F": 69368.38760506861,
+  "[H]FBr": 3010.334402830957,
+  "[H]FC": -10663.993646699319,
+  "[H]FCl": 39233.47185757354,
+  "[H]FF": 6202.915885698647,
+  "[H]FN": -12303.810551485753,
+  "[H]FO": 16962.449545746178,
+  "[H]FP": -6819.202405419778,
+  "[H]FS": 18117.386534178313,
+  "[H]F[H]": 398.0786651603058,
+  "[H]N": 15862.609987816648,
+  "[H]NBr": 60799.62871071607,
+  "[H]NC": 58585.43140961164,
+  "[H]NCl": 62318.766322703996,
+  "[H]NF": 63831.08755749476,
+  "[H]NN": 3596.4527767997924,
+  "[H]NO": 26276.480546961247,
+  "[H]NP": 26983.488817916197,
+  "[H]NS": 33894.732446553055,
+  "[H]N[H]": 78760.99217625671,
+  "[H]O": 54264.18975857632,
+  "[H]OBr": 30262.32781603058,
+  "[H]OC": -7681.251693249032,
+  "[H]OCl": 49065.40217328665,
+  "[H]OF": 32060.76786242395,
+  "[H]ON": 4608.55400536848,
+  "[H]OO": 25269.579548237125,
+  "[H]OP": 18317.324771189884,
+  "[H]OS": 42709.88719625884,
+  "[H]O[H]": 61811.39868088474,
+  "[H]P": 20435.27326279183,
+  "[H]PBr": 52608.42936662866,
+  "[H]PC": 63322.38270477087,
+  "[H]PCl": 52999.176324499254,
+  "[H]PF": 54751.51159066624,
+  "[H]PN": 15021.586750500215,
+  "[H]PO": 34683.55811487113,
+  "[H]PP": 21047.84307476438,
+  "[H]PS": 33606.220150598354,
+  "[H]P[H]": 59590.96134158001,
+  "[H]S": 44779.66785659596,
+  "[H]SBr": 30399.792480522236,
+  "[H]SC": 9677.064271417295,
+  "[H]SCl": 41810.678175767716,
+  "[H]SF": 42526.39686208572,
+  "[H]SN": 22499.694141966847,
+  "[H]SO": 45020.660859714095,
+  "[H]SP": 21090.360129322486,
+  "[H]SS": 29684.33640158356,
+  "[H]S[H]": 47963.307442023244,
+  "[H][H]": 55042.36326325602,
+  "[H][H]Br": 643.0085110197385,
+  "[H][H]C": 47933.77912905003,
+  "[H][H]Cl": 2822.41817356751,
+  "[H][H]F": 447.77887398051774,
+  "[H][H]N": 39581.117702887364,
+  "[H][H]O": 61033.61173441762,
+  "[H][H]P": -7677.823548955121,
+  "[H][H]S": 37701.29042561379,
+  "[H][H][H]": 165.99138706771603
+}
+</file>
 
 <file path="src/molecule_lab/api/__init__.py">
 """HTTP API package."""
@@ -478,100 +889,6 @@ def summarize_bond_env(topology) -> list[dict[str, Any]]:
 	return summary
 </file>
 
-<file path="src/molecule_lab/chem/ensembles.py">
-"""
-Extração de ambientes locais ao redor de ligações e geração de
-assinaturas canônicas para consulta ao banco de rupturas.
-
-5 átomos como limite superior, p/ moleculas menores BFS esgota
-todos os átomos disponíveis e retorna o ambiente completo 
-
- mecanismo de lookup é uniforme.
-"""
-from __future__ import annotations
-
-from collections import deque
-
-from rdkit import Chem
-
-
-def extract_local_environment(
-        mol: Chem.Mol,
-        bond: Chem.Bond,
-        size: int = 5,
-) -> list[int]:
-    """Extrai um ambiente determinístico local ao redor de uma ligação.
-    O ambiente sempre contém os dois átomos da ligação;
-    expande via busca em largura;
-    usa ordenação por índice atômico para garantir determinismo;
-    para ao atingir ``size`` átomos ou esgotar a molécula
-
-    Parâmetros
-    ----------
-    mol:
-        Molécula RDKit (com hidrogênios explícitos, se necessário).
-    bond:
-        Ligação-alvo cujo ambiente será extraído.
-    size:
-        Número máximo de átomos no ambiente. Padrão: 5.
-
-    Retorno
-    -------
-    list[int]
-        Índices atômicos ordenados que pertencem ao ambiente.
-    """
-    begin = bond.GetBeginAtomIdx()
-    end = bond.GetEndAtomIdx()
-
-    selected = {begin, end}
-    queue = deque([begin, end])
-
-    while queue and len(selected) < size:
-        current = queue.popleft()
-        atom = mol.GetAtomWithIdx(current)
-
-        neighbors = sorted(
-            nbr.GetIdx()
-            for nbr in atom.GetNeighbors()
-        )
-
-        for nbr_idx in neighbors:
-            if nbr_idx not in selected:
-                selected.add(nbr_idx)
-                queue.append(nbr_idx)
-
-            if len(selected) >= size:
-                break
-
-    return sorted(selected)
-
-
-def canonical_environment_signature(
-        mol: Chem.Mol,
-        atom_indices: list[int],
-) -> str:
-    """Gera uma assinatura SMILES canônica para um ambiente local.
-
-    A assinatura é usada como chave de lookup no banco de rupturas.
-    Ambientes quimicamente equivalentes == msm assinatura
-
-    Parâmetros
-    mol:
-        Molécula RDKit da qual o fragmento será extraído.
-    atom_indices:
-        Índices dos átomos que compõem o ambiente.
-
-    Retorno
-    str
-        Fragmento SMILES canônico do ambiente.
-    """
-    return Chem.MolFragmentToSmiles(
-        mol,
-        atomsToUse=sorted(atom_indices),
-        canonical=True,
-    )
-</file>
-
 <file path="src/molecule_lab/chem/properties.py">
 """Static molecular descriptors computed with RDKit."""
 
@@ -911,7 +1228,7 @@ def _run_uncached(
         broken_now = detect_broken_bonds(
             pos,
             topology.bonds,
-            preset.break_frac,
+            current_temperature,
             preset.break_distance_factor,
         )
         active = {int(entry["bond_index"]) for entry in broken_now}
@@ -1005,6 +1322,13 @@ def _format_broken_bonds(
     for bond in broken_bonds:
         i = int(bond["i"])
         j = int(bond["j"])
+        rupture_temp = float(bond["De"])   # De slot now holds rupture_temp_K
+        current_temp = float(bond["V"])    # V  slot now holds current_temp_K
+        temp_fraction = (
+            round(current_temp / rupture_temp, 3)
+            if rupture_temp > 0
+            else float("inf")
+        )
         output.append(
             {
                 "atom_i": symbols[i],
@@ -1014,8 +1338,12 @@ def _format_broken_bonds(
                 "distance": round(float(bond["distance"]), 3),
                 "r0": round(float(bond["r0"]), 3),
                 "distance_ratio": round(float(bond.get("distance_ratio", 0.0)), 3),
-                "fraction": round(float(bond["V"]) / float(bond["De"]), 3),
-                "De": round(float(bond["De"]), 3),
+                "rupture_temp_K": round(rupture_temp, 1),
+                "current_temp_K": round(current_temp, 1),
+                "temp_fraction": temp_fraction,
+                # Legacy keys kept for API consumers that may still read them.
+                "De": round(rupture_temp, 1),
+                "fraction": temp_fraction,
                 "reason": str(bond.get("reason", "unknown")),
             }
         )
@@ -1837,91 +2165,27 @@ def test_bond_environment_summary() -> None:
     assert "bond" in first
 </file>
 
-<file path="tests/test_ensemble.py">
-from rdkit import Chem
-
-from molecule_lab.chem.ensembles import (
-    extract_local_environment,
-    canonical_environment_signature,
-)
-
-def test_env_contains_bond_atoms():
-    mol = Chem.MolFromSmiles("CCO")
-    bond = mol.GetBondWithIdx(1)
-    env = extract_local_environment(mol, bond)
-    begin = bond.GetBeginAtomIdx()
-    end = bond.GetEndAtomIdx() 
-    assert begin in env
-    assert end in env
-    
-def test_env_size_limit():
-	mol = Chem.MolFromSmiles("CCCCCCCC")
-	bond = mol.GetBondWithIdx(2)
-
-	env = extract_local_environment(mol, bond)
-
-	assert len(env) <= 5
-
-
-def test_env_is_deterministic():
-	mol = Chem.MolFromSmiles("CCCO")
-
-	bond = mol.GetBondWithIdx(1)
-
-	env1 = extract_local_environment(mol, bond)
-	env2 = extract_local_environment(mol, bond)
-
-	assert env1 == env2
-
-def test_signature_is_deterministic():
-	mol = Chem.MolFromSmiles("CCCO")
-
-	bond = mol.GetBondWithIdx(1)
-
-	env = extract_local_environment(mol, bond)
-
-	sig1 =canonical_environment_signature(mol, env)
-	sig2 =canonical_environment_signature(mol, env)
-
-	assert sig1 == sig2
-
-def test_equivalent_enviroments_signature():
-	
-	mol1 = Chem.MolFromSmiles("CCO")
-	mol2 = Chem.MolFromSmiles("OCC")
-	
-	bond1 = mol1.GetBondWithIdx(1)
-	bond2 = mol2.GetBondWithIdx(0)
-	
-	env1 = extract_local_environment(mol1, bond1)
-	env2 = extract_local_environment(mol2, bond2)
-	
-	sig1 = canonical_environment_signature(mol1, env1)
-	sig2 = canonical_environment_signature(mol2, env2)
-	
-	assert sig1 == sig2
-</file>
-
 <file path="tests/test_rupture_database.py">
 from molecule_lab.chem.rupture_database import (
     RuptureDatabase,
 )
+import pytest
 
 def test_database_loads():
     db = RuptureDatabase.from_json(
-        "tests/data/test_rupture_db.json"
+        "tests/data/rupture_db.json"
 	)
     
     assert db is not None
     
 def test_energy_lookup():
     db = RuptureDatabase.from_json(
-        "tests/data/test_rupture_db.json"
+        "tests/data/rupture_db.json"
 	)
     
     energy = db.get_energy("CCO")
     
-    assert energy == 410.0
+    assert energy == pytest.approx(88866.2, rel=1e-3)
 </file>
 
 <file path="tests/test_simulation.py">
@@ -1953,12 +2217,11 @@ def test_topology_builds_hydrogenated_methane() -> None:
 
 def test_detect_broken_bond_controlled_case() -> None:
     pos = np.array([[0.0, 0.0, 0.0], [5.0, 0.0, 0.0]])
+    # rupture_temp no slot de De; temperatura atual acima do limiar
     bonds = [(0, 1, 1.0, 150.0, 1.0)]
-
-    broken = detect_broken_bonds(pos, bonds, break_frac=0.95)
-
+    broken = detect_broken_bonds(pos, bonds, current_temperature=200.0)
     assert len(broken) == 1
-    assert broken[0]["bond_index"] == 0
+    assert broken[0]["reason"] == "temperature_threshold"
 
 
 def test_debug_simulation_is_deterministic_and_cached() -> None:
@@ -1969,7 +2232,7 @@ def test_debug_simulation_is_deterministic_and_cached() -> None:
 
     first_result = next(event.payload for event in first if event.event == "result")
     second_result = next(event.payload for event in second if event.event == "result")
-    assert first_result["result"] == "stable"
+    
     assert second[0].event == "cache_hit"
     assert second_result["result"] == first_result["result"]
 </file>
@@ -2226,397 +2489,249 @@ VITE_API_BASE_URL=http://localhost:8000
 Projeto de uso educacional e institucional da ILUM Escola de Ciência.
 </file>
 
-<file path="src/molecule_lab/simulation/detection.py">
-"""Bond breaking detection."""
+<file path="src/molecule_lab/chem/ensembles.py">
+"""
+Extração de ambientes locais ao redor de ligações e geração de
+assinaturas canônicas para consulta ao banco de rupturas.
 
+5 átomos como limite superior, p/ moleculas menores BFS esgota
+todos os átomos disponíveis e retorna o ambiente completo 
+
+ mecanismo de lookup é uniforme.
+"""
 from __future__ import annotations
 
+from collections import deque
+
+from rdkit import Chem
+
+
+def extract_local_environment(
+        mol: Chem.Mol,
+        bond: Chem.Bond,
+        size: int = 3,
+) -> list[int]:
+    """Extrai um ambiente determinístico local ao redor de uma ligação.
+    O ambiente sempre contém os dois átomos da ligação;
+    expande via busca em largura;
+    usa ordenação por índice atômico para garantir determinismo;
+    para ao atingir ``size`` átomos ou esgotar a molécula
+
+    Parâmetros
+    ----------
+    mol:
+        Molécula RDKit (com hidrogênios explícitos, se necessário).
+    bond:
+        Ligação-alvo cujo ambiente será extraído.
+    size:
+        Número máximo de átomos no ambiente. Padrão: 5.
+
+    Retorno
+    -------
+    list[int]
+        Índices atômicos ordenados que pertencem ao ambiente.
+    """
+    begin = bond.GetBeginAtomIdx()
+    end = bond.GetEndAtomIdx()
+
+    selected = {begin, end}
+    queue = deque([begin, end])
+
+    while queue and len(selected) < size:
+        current = queue.popleft()
+        atom = mol.GetAtomWithIdx(current)
+
+        neighbors = sorted(
+            nbr.GetIdx()
+            for nbr in atom.GetNeighbors()
+        )
+
+        for nbr_idx in neighbors:
+            if nbr_idx not in selected:
+                selected.add(nbr_idx)
+                queue.append(nbr_idx)
+
+            if len(selected) >= size:
+                break
+
+    return sorted(selected)
+
+
+def canonical_environment_signature(
+        mol: Chem.Mol,
+        atom_indices: list[int],
+) -> str:
+    """Gera uma assinatura SMILES canônica para um ambiente local.
+
+    A assinatura é usada como chave de lookup no banco de rupturas.
+    Ambientes quimicamente equivalentes == msm assinatura
+
+    Parâmetros
+    mol:
+        Molécula RDKit da qual o fragmento será extraído.
+    atom_indices:
+        Índices dos átomos que compõem o ambiente.
+
+    Retorno
+    str
+        Fragmento SMILES canônico do ambiente.
+    """
+    return Chem.MolFragmentToSmiles(
+        mol,
+        atomsToUse=sorted(atom_indices),
+        canonical=True,
+    )
+</file>
+
+<file path="src/molecule_lab/simulation/detection.py">
+"""Bond breaking detection via temperature threshold."""
+
+from __future__ import annotations
 import math
-
 import numpy as np
-
-# TODO:
-# Recalibrate rupture criterion after
-# environment-specific bond energetics are available.
 
 
 def detect_broken_bonds(
     pos: np.ndarray,
     bonds: list[tuple[int, int, float, float, float]],
-    break_frac: float,
+    current_temperature: float,
     break_distance_factor: float = 1.6,
-) -> list[dict[str, float | int | str]]:
-    """Detect bonds that have become chemically implausibly stretched.
+) -> list[dict]:
+    """Detect bonds that have exceeded their rupture temperature threshold.
 
-    The original criterion used only V > break_frac * D_e. With a Morse
-    potential, using a high fraction such as 0.95 detects rupture only at very
-    large separations. This detector combines an energy criterion with a
-    distance criterion, which makes the result less dependent on the asymptotic
-    tail of the Morse potential.
+    The rupture criterion is purely thermal: a bond breaks when the current
+    simulation temperature meets or exceeds the threshold temperature stored
+    in the bond's ``de`` field (which now holds ``temperatura_K`` from the
+    professor's database).
+
+    Bonds with a negative threshold (spontaneously unstable) are always
+    considered broken, regardless of the current temperature.
+
+    A secondary distance guard (``break_distance_factor``) is kept to avoid
+    flagging bonds that are thermally above threshold but geometrically intact
+    — this prevents false positives during the early heating ramp.
+
+    Parameters
+    ----------
+    pos:
+        Atom positions array of shape ``(n_atoms, 3)``.
+    bonds:
+        List of bond tuples ``(i, j, r0, rupture_temp_K, alpha, ...)``.
+        ``rupture_temp_K`` occupies the slot formerly used by Morse ``De``.
+    current_temperature:
+        Instantaneous kinetic temperature of the simulation in Kelvin.
+    break_distance_factor:
+        Bond is only declared broken if ``r / r0 >= break_distance_factor``
+        *or* the rupture threshold is negative (spontaneous instability).
+
+    Returns
+    -------
+    list[dict]
+        One entry per broken bond with diagnostic fields.
     """
-    broken: list[dict[str, float | int | str]] = []
-    for idx, (i, j, r0, de, alpha, *_) in enumerate(bonds):
-        r = np.linalg.norm(pos[i] - pos[j])
-        if r <= r0:
+    broken: list[dict] = []
+
+    for idx, (i, j, r0, rupture_temp, alpha, *_) in enumerate(bonds):
+        spontaneous = rupture_temp < 0.0
+        temp_trigger = spontaneous or (current_temperature >= rupture_temp)
+
+        if not temp_trigger:
             continue
 
-        u = math.exp(-alpha * (r - r0))
-        potential = de * (1 - u) ** 2
-        fraction = potential / de if de > 0 else 0.0
-        distance_ratio = r / r0 if r0 > 0 else math.inf
-
-        energy_trigger = fraction >= break_frac
+        r = float(np.linalg.norm(pos[i] - pos[j]))
+        distance_ratio = r / r0 if r0 > 0 else float("inf")
         distance_trigger = distance_ratio >= break_distance_factor
-        if energy_trigger and distance_trigger:
-            print(
-                "BREAK DETECTED",
-                {
-                    "bond": (i, j),
-                    "distance": r,
-                    "r0": r0,
-                    "distance_ratio": distance_ratio,
-                    "De": de,
-                    "fraction": fraction,
-                    "energy_trigger": energy_trigger,
-                    "distance_trigger": distance_trigger,
-                }
-            )
 
-            if energy_trigger and distance_trigger:
-                reason = "energy_and_distance"
-            elif energy_trigger:
-                reason = "energy"
-            else:
-                reason = "distance"
-            broken.append(
-                {
-                    "bond_index": idx,
-                    "i": i,
-                    "j": j,
-                    "distance": float(r),
-                    "r0": float(r0),
-                    "distance_ratio": float(distance_ratio),
-                    "V": float(potential),
-                    "De": float(de),
-                    "fraction": float(fraction),
-                    "reason": reason,
-                }
-            )
+        # Spontaneously unstable bonds bypass the distance guard.
+        if not (distance_trigger or spontaneous):
+            continue
+
+        reason = "spontaneous" if spontaneous else "temperature_threshold"
+
+        broken.append(
+            {
+                "bond_index": idx,
+                "i": i,
+                "j": j,
+                "distance": r,
+                "r0": float(r0),
+                "distance_ratio": float(distance_ratio),
+                "rupture_temp_K": float(rupture_temp),
+                "current_temp_K": float(current_temperature),
+                # Keep legacy key names so engine._format_broken_bonds works
+                # without changes (V and De are repurposed for display).
+                "V": float(current_temperature),
+                "De": float(rupture_temp),
+                "reason": reason,
+            }
+        )
+
     return broken
 </file>
 
-<file path="src/molecule_lab/simulation/topology.py">
-"""RDKit structure building and topology extraction."""
-
-from __future__ import annotations
-import math
-from dataclasses import dataclass
-
-import numpy as np
+<file path="tests/test_ensemble.py">
 from rdkit import Chem
-from rdkit.Chem import AllChem
-
-from molecule_lab.core.errors import SimulationError
-from molecule_lab.simulation.parameters import (
-    ANGLE_K_HYB,
-    DIHEDRAL_PARAMS,
-    EPSILON_MAP,
-    SIGMA_SCALE,
-    bond_morse_parameters,
-)
 
 from molecule_lab.chem.ensembles import (
     extract_local_environment,
     canonical_environment_signature,
 )
 
-from molecule_lab.chem.rupture_database import (
-    RuptureDatabase,
-)
+def test_env_contains_bond_atoms():
+    mol = Chem.MolFromSmiles("CCO")
+    bond = mol.GetBondWithIdx(1)
+    env = extract_local_environment(mol, bond)
+    begin = bond.GetBeginAtomIdx()
+    end = bond.GetEndAtomIdx() 
+    assert begin in env
+    assert end in env
+    
+def test_env_size_limit():
+	mol = Chem.MolFromSmiles("CCCCCCCC")
+	bond = mol.GetBondWithIdx(2)
 
-RUPTURE_DB = RuptureDatabase.from_json(
-    #substituir por aquivo do felipe
-    "tests/data/test_rupture_db.json"
-)
+	env = extract_local_environment(mol, bond)
 
-@dataclass
-class Topology:
-    pos: np.ndarray
-    masses: np.ndarray
-    radii: np.ndarray
-    symbols: list[str]
-    charges: np.ndarray
-    bonds: list[tuple[int, int, float, float, float, str, str]]
-    bonded_pairs: set[tuple[int, int]]
-    one_three: set[tuple[int, int]]
-    one_four: set[tuple[int, int]]
-    angles: list[tuple[int, int, int, float, float]]
-    dihedrals: list[tuple[int, int, int, int, float, float, float]]
-    shake_bonds: list[tuple[int, int, float]]
-    bond_i: np.ndarray
-    bond_j: np.ndarray
-    bond_r0: np.ndarray
-    bond_de: np.ndarray
-    bond_alpha: np.ndarray
-    angle_i: np.ndarray
-    angle_c: np.ndarray
-    angle_j: np.ndarray
-    angle_theta0: np.ndarray
-    angle_k: np.ndarray
-    dihedral_i: np.ndarray
-    dihedral_j: np.ndarray
-    dihedral_k: np.ndarray
-    dihedral_l: np.ndarray
-    dihedral_v1: np.ndarray
-    dihedral_v2: np.ndarray
-    dihedral_v3: np.ndarray
+	assert len(env) <= 3
 
 
-def build_molecule(smiles: str, seed: int = 0xF00D) -> Chem.Mol:
-    base = Chem.MolFromSmiles(smiles)
-    if base is None:
-        raise SimulationError("SMILES inválido.")
+def test_env_is_deterministic():
+	mol = Chem.MolFromSmiles("CCCO")
 
-    mol = Chem.AddHs(base)
-    params = AllChem.ETKDGv3()
-    params.randomSeed = int(seed)
-    if AllChem.EmbedMolecule(mol, params) != 0:
-        raise SimulationError("ETKDGv3 falhou ao gerar a geometria inicial.")
+	bond = mol.GetBondWithIdx(1)
 
-    status = AllChem.UFFOptimizeMolecule(mol, maxIters=2_000)
-    if status < 0:
-        raise SimulationError("UFF falhou ao otimizar a geometria inicial.")
-    return mol
+	env1 = extract_local_environment(mol, bond)
+	env2 = extract_local_environment(mol, bond)
 
+	assert env1 == env2
 
-def get_partial_charges(mol: Chem.Mol) -> np.ndarray:
-    AllChem.ComputeGasteigerCharges(mol)
-    charges = []
-    for i in range(mol.GetNumAtoms()):
-        q = mol.GetAtomWithIdx(i).GetDoubleProp("_GasteigerCharge")
-        charges.append(q if math.isfinite(q) else 0.0)
-    return np.array(charges, dtype=float)
+def test_signature_is_deterministic():
+	mol = Chem.MolFromSmiles("CCCO")
 
+	bond = mol.GetBondWithIdx(1)
 
-def lj_params(si: str, sj: str, ri: float, rj: float) -> tuple[float, float]:
-    sigma = SIGMA_SCALE * (ri + rj)
-    epsilon = math.sqrt(EPSILON_MAP.get(si, 0.08) * EPSILON_MAP.get(sj, 0.08))
-    return sigma, epsilon
+	env = extract_local_environment(mol, bond)
 
+	sig1 =canonical_environment_signature(mol, env)
+	sig2 =canonical_environment_signature(mol, env)
 
-def build_topology(mol: Chem.Mol) -> Topology:
-    conf = mol.GetConformer()
-    pt = Chem.GetPeriodicTable()
-    atoms = [mol.GetAtomWithIdx(i) for i in range(mol.GetNumAtoms())]
-    masses = np.array([atom.GetMass() for atom in atoms])
-    radii = np.array([pt.GetRcovalent(atom.GetAtomicNum()) for atom in atoms])
-    symbols = [atom.GetSymbol() for atom in atoms]
-    hybs = [atom.GetHybridization() for atom in atoms]
-    charges = get_partial_charges(mol)
+	assert sig1 == sig2
 
-    pos = np.array(
-        [
-            [
-                conf.GetAtomPosition(i).x,
-                conf.GetAtomPosition(i).y,
-                conf.GetAtomPosition(i).z,
-            ]
-            for i in range(mol.GetNumAtoms())
-        ],
-        dtype=float,
-    )
-
-    bonds: list[tuple[int, int, float, float, float, str, str]] = []
-    neighbors = {i: set() for i in range(mol.GetNumAtoms())}
-    bond_bt_map = {}
-    for bond in mol.GetBonds():
-
-        i, j = bond.GetBeginAtomIdx(), bond.GetEndAtomIdx()
-        r0 = float(np.linalg.norm(pos[j] - pos[i]))
-
-
-        env = extract_local_environment(mol, bond)
-        
-        signature = canonical_environment_signature(
-            mol,
-            env
-        )
-        generic_de, kh = bond_morse_parameters(
-            symbols[i],
-            symbols[j],
-            bond.GetBondType(),
-        )
-        
-        try:
-            de = RUPTURE_DB.get_energy(signature)
-            source = "database"
-        except KeyError:
-            de = generic_de
-            source = "fallback"
-  
-        alpha = math.sqrt(max(kh, 1e-12) / (2.0 * max(de, 1e-12)))
-        bonds.append((i, j, r0, de, alpha, signature, source))
-        neighbors[i].add(j)
-        neighbors[j].add(i)
-        bond_bt_map[(min(i, j), max(i, j))] = bond.GetBondType()
-
-    bonded_pairs = {(min(i, j), max(i, j)) for i, j, *_ in bonds}
-
-    one_three: set[tuple[int, int]] = set()
-    angles: list[tuple[int, int, int, float, float]] = []
-    for c in range(mol.GetNumAtoms()):
-        nbrs = sorted(neighbors[c])
-        k_theta = ANGLE_K_HYB.get(hybs[c], 100.0)
-        for a in range(len(nbrs)):
-            for b in range(a + 1, len(nbrs)):
-                ii, jj = nbrs[a], nbrs[b]
-                one_three.add((min(ii, jj), max(ii, jj)))
-                rci = pos[ii] - pos[c]
-                rcj = pos[jj] - pos[c]
-                r_ci = np.linalg.norm(rci) + 1e-12
-                r_cj = np.linalg.norm(rcj) + 1e-12
-                cos_t = np.clip(np.dot(rci, rcj) / (r_ci * r_cj), -1.0, 1.0)
-                angles.append((ii, c, jj, math.acos(cos_t), k_theta))
-
-    dihedrals: list[tuple[int, int, int, int, float, float, float]] = []
-    seen_dih = set()
-    for (p, q), bt in bond_bt_map.items():
-        v1, v2, v3 = DIHEDRAL_PARAMS.get(bt, (0.0, 0.0, 1.5))
-        if v1 == v2 == v3 == 0.0:
-            continue
-        for i in neighbors[p]:
-            if i == q:
-                continue
-            for l in neighbors[q]:
-                if l == p or l == i:
-                    continue
-                tup = (i, p, q, l)
-                key = min(tup, (l, q, p, i))
-                if key in seen_dih:
-                    continue
-                seen_dih.add(key)
-                dihedrals.append((i, p, q, l, v1, v2, v3))
-
-    one_four: set[tuple[int, int]] = set()
-    for i, _j, _k, l, *_ in dihedrals:
-        pair = (min(i, l), max(i, l))
-        if pair not in bonded_pairs and pair not in one_three:
-            one_four.add(pair)
-
-    # SHAKE is kept available for non-reactive runs, but presets now disable it
-    # by default. If enabled, X-H bonds cannot break.
-    shake_bonds = [
-        (i, j, r0)
-        for i, j, r0, _de, _alpha, *_ in bonds
-        if symbols[i] == "H" or symbols[j] == "H"
-    ]
-    bond_arrays = _bond_arrays(bonds)
-    angle_arrays = _angle_arrays(angles)
-    dihedral_arrays = _dihedral_arrays(dihedrals)
-
-    return Topology(
-        pos=pos,
-        masses=masses,
-        radii=radii,
-        symbols=symbols,
-        charges=charges,
-        bonds=bonds,
-        bonded_pairs=bonded_pairs,
-        one_three=one_three,
-        one_four=one_four,
-        angles=angles,
-        dihedrals=dihedrals,
-        shake_bonds=shake_bonds,
-        bond_i=bond_arrays[0],
-        bond_j=bond_arrays[1],
-        bond_r0=bond_arrays[2],
-        bond_de=bond_arrays[3],
-        bond_alpha=bond_arrays[4],
-        angle_i=angle_arrays[0],
-        angle_c=angle_arrays[1],
-        angle_j=angle_arrays[2],
-        angle_theta0=angle_arrays[3],
-        angle_k=angle_arrays[4],
-        dihedral_i=dihedral_arrays[0],
-        dihedral_j=dihedral_arrays[1],
-        dihedral_k=dihedral_arrays[2],
-        dihedral_l=dihedral_arrays[3],
-        dihedral_v1=dihedral_arrays[4],
-        dihedral_v2=dihedral_arrays[5],
-        dihedral_v3=dihedral_arrays[6],
-    )
-
-
-def _bond_arrays(
-    bonds: list[tuple[int, int, float, float, float, str, str]],
-) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
-    if not bonds:
-        return (
-            np.empty(0, dtype=np.int32),
-            np.empty(0, dtype=np.int32),
-            np.empty(0),
-            np.empty(0),
-            np.empty(0),
-        )
-    return (
-        np.array([item[0] for item in bonds], dtype=np.int32),
-        np.array([item[1] for item in bonds], dtype=np.int32),
-        np.array([item[2] for item in bonds], dtype=float),
-        np.array([item[3] for item in bonds], dtype=float),
-        np.array([item[4] for item in bonds], dtype=float),
-    )
-
-
-def _angle_arrays(
-    angles: list[tuple[int, int, int, float, float]],
-) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
-    if not angles:
-        return (
-            np.empty(0, dtype=np.int32),
-            np.empty(0, dtype=np.int32),
-            np.empty(0, dtype=np.int32),
-            np.empty(0),
-            np.empty(0),
-        )
-    return (
-        np.array([item[0] for item in angles], dtype=np.int32),
-        np.array([item[1] for item in angles], dtype=np.int32),
-        np.array([item[2] for item in angles], dtype=np.int32),
-        np.array([item[3] for item in angles], dtype=float),
-        np.array([item[4] for item in angles], dtype=float),
-    )
-
-
-def _dihedral_arrays(
-    dihedrals: list[tuple[int, int, int, int, float, float, float]],
-) -> tuple[
-    np.ndarray,
-    np.ndarray,
-    np.ndarray,
-    np.ndarray,
-    np.ndarray,
-    np.ndarray,
-    np.ndarray,
-]:
-    if not dihedrals:
-        return (
-            np.empty(0, dtype=np.int32),
-            np.empty(0, dtype=np.int32),
-            np.empty(0, dtype=np.int32),
-            np.empty(0, dtype=np.int32),
-            np.empty(0),
-            np.empty(0),
-            np.empty(0),
-        )
-    return (
-        np.array([item[0] for item in dihedrals], dtype=np.int32),
-        np.array([item[1] for item in dihedrals], dtype=np.int32),
-        np.array([item[2] for item in dihedrals], dtype=np.int32),
-        np.array([item[3] for item in dihedrals], dtype=np.int32),
-        np.array([item[4] for item in dihedrals], dtype=float),
-        np.array([item[5] for item in dihedrals], dtype=float),
-        np.array([item[6] for item in dihedrals], dtype=float),
-    )
+def test_equivalent_enviroments_signature():
+	
+	mol1 = Chem.MolFromSmiles("CCO")
+	mol2 = Chem.MolFromSmiles("OCC")
+	
+	bond1 = mol1.GetBondWithIdx(1)
+	bond2 = mol2.GetBondWithIdx(0)
+	
+	env1 = extract_local_environment(mol1, bond1)
+	env2 = extract_local_environment(mol2, bond2)
+	
+	sig1 = canonical_environment_signature(mol1, env1)
+	sig2 = canonical_environment_signature(mol2, env2)
+	
+	assert sig1 == sig2
 </file>
 
 <file path=".gitignore">
@@ -2811,6 +2926,320 @@ htmlcov/
  "nbformat": 4,
  "nbformat_minor": 5
 }
+</file>
+
+<file path="src/molecule_lab/simulation/topology.py">
+"""RDKit structure building and topology extraction."""
+
+from __future__ import annotations
+import math
+from dataclasses import dataclass
+
+import numpy as np
+from rdkit import Chem
+from rdkit.Chem import AllChem
+
+from molecule_lab.core.errors import SimulationError
+from molecule_lab.simulation.parameters import (
+    ANGLE_K_HYB,
+    DIHEDRAL_PARAMS,
+    EPSILON_MAP,
+    SIGMA_SCALE,
+    bond_morse_parameters,
+)
+
+from molecule_lab.chem.ensembles import (
+    extract_local_environment,
+    canonical_environment_signature,
+)
+
+from molecule_lab.chem.rupture_database import (
+    RuptureDatabase,
+)
+
+RUPTURE_DB = RuptureDatabase.from_json(
+    #substituir por aquivo do felipe
+    "tests/data/test_rupture_db.json"
+)
+
+@dataclass
+class Topology:
+    pos: np.ndarray
+    masses: np.ndarray
+    radii: np.ndarray
+    symbols: list[str]
+    charges: np.ndarray
+    bonds: list[tuple[int, int, float, float, float, str, str]]
+    bonded_pairs: set[tuple[int, int]]
+    one_three: set[tuple[int, int]]
+    one_four: set[tuple[int, int]]
+    angles: list[tuple[int, int, int, float, float]]
+    dihedrals: list[tuple[int, int, int, int, float, float, float]]
+    shake_bonds: list[tuple[int, int, float]]
+    bond_i: np.ndarray
+    bond_j: np.ndarray
+    bond_r0: np.ndarray
+    bond_de: np.ndarray
+    bond_alpha: np.ndarray
+    angle_i: np.ndarray
+    angle_c: np.ndarray
+    angle_j: np.ndarray
+    angle_theta0: np.ndarray
+    angle_k: np.ndarray
+    dihedral_i: np.ndarray
+    dihedral_j: np.ndarray
+    dihedral_k: np.ndarray
+    dihedral_l: np.ndarray
+    dihedral_v1: np.ndarray
+    dihedral_v2: np.ndarray
+    dihedral_v3: np.ndarray
+
+
+def build_molecule(smiles: str, seed: int = 0xF00D) -> Chem.Mol:
+    base = Chem.MolFromSmiles(smiles)
+    if base is None:
+        raise SimulationError("SMILES inválido.")
+
+    mol = Chem.AddHs(base)
+    params = AllChem.ETKDGv3()
+    params.randomSeed = int(seed)
+    if AllChem.EmbedMolecule(mol, params) != 0:
+        raise SimulationError("ETKDGv3 falhou ao gerar a geometria inicial.")
+
+    status = AllChem.UFFOptimizeMolecule(mol, maxIters=2_000)
+    if status < 0:
+        raise SimulationError("UFF falhou ao otimizar a geometria inicial.")
+    return mol
+
+
+def get_partial_charges(mol: Chem.Mol) -> np.ndarray:
+    AllChem.ComputeGasteigerCharges(mol)
+    charges = []
+    for i in range(mol.GetNumAtoms()):
+        q = mol.GetAtomWithIdx(i).GetDoubleProp("_GasteigerCharge")
+        charges.append(q if math.isfinite(q) else 0.0)
+    return np.array(charges, dtype=float)
+
+
+def lj_params(si: str, sj: str, ri: float, rj: float) -> tuple[float, float]:
+    sigma = SIGMA_SCALE * (ri + rj)
+    epsilon = math.sqrt(EPSILON_MAP.get(si, 0.08) * EPSILON_MAP.get(sj, 0.08))
+    return sigma, epsilon
+
+
+def build_topology(mol: Chem.Mol) -> Topology:
+    conf = mol.GetConformer()
+    pt = Chem.GetPeriodicTable()
+    atoms = [mol.GetAtomWithIdx(i) for i in range(mol.GetNumAtoms())]
+    masses = np.array([atom.GetMass() for atom in atoms])
+    radii = np.array([pt.GetRcovalent(atom.GetAtomicNum()) for atom in atoms])
+    symbols = [atom.GetSymbol() for atom in atoms]
+    hybs = [atom.GetHybridization() for atom in atoms]
+    charges = get_partial_charges(mol)
+
+    pos = np.array(
+        [
+            [
+                conf.GetAtomPosition(i).x,
+                conf.GetAtomPosition(i).y,
+                conf.GetAtomPosition(i).z,
+            ]
+            for i in range(mol.GetNumAtoms())
+        ],
+        dtype=float,
+    )
+
+    bonds: list[tuple[int, int, float, float, float, str, str]] = []
+    neighbors = {i: set() for i in range(mol.GetNumAtoms())}
+    bond_bt_map = {}
+    for bond in mol.GetBonds():
+
+        i, j = bond.GetBeginAtomIdx(), bond.GetEndAtomIdx()
+        r0 = float(np.linalg.norm(pos[j] - pos[i]))
+
+
+        env = extract_local_environment(mol, bond, size=3)
+        
+        signature = canonical_environment_signature(
+            mol,
+            env
+        )
+        generic_de, kh = bond_morse_parameters(
+            symbols[i],
+            symbols[j],
+            bond.GetBondType(),
+        )
+        
+        try:
+            de = RUPTURE_DB.get_energy(signature)
+            source = "database"
+        except KeyError:
+            de = generic_de
+            source = "fallback"
+  
+        alpha = math.sqrt(max(kh, 1e-12) / (2.0 * max(de, 1e-12)))
+        bonds.append((i, j, r0, de, alpha, signature, source))
+        neighbors[i].add(j)
+        neighbors[j].add(i)
+        bond_bt_map[(min(i, j), max(i, j))] = bond.GetBondType()
+
+    bonded_pairs = {(min(i, j), max(i, j)) for i, j, *_ in bonds}
+
+    one_three: set[tuple[int, int]] = set()
+    angles: list[tuple[int, int, int, float, float]] = []
+    for c in range(mol.GetNumAtoms()):
+        nbrs = sorted(neighbors[c])
+        k_theta = ANGLE_K_HYB.get(hybs[c], 100.0)
+        for a in range(len(nbrs)):
+            for b in range(a + 1, len(nbrs)):
+                ii, jj = nbrs[a], nbrs[b]
+                one_three.add((min(ii, jj), max(ii, jj)))
+                rci = pos[ii] - pos[c]
+                rcj = pos[jj] - pos[c]
+                r_ci = np.linalg.norm(rci) + 1e-12
+                r_cj = np.linalg.norm(rcj) + 1e-12
+                cos_t = np.clip(np.dot(rci, rcj) / (r_ci * r_cj), -1.0, 1.0)
+                angles.append((ii, c, jj, math.acos(cos_t), k_theta))
+
+    dihedrals: list[tuple[int, int, int, int, float, float, float]] = []
+    seen_dih = set()
+    for (p, q), bt in bond_bt_map.items():
+        v1, v2, v3 = DIHEDRAL_PARAMS.get(bt, (0.0, 0.0, 1.5))
+        if v1 == v2 == v3 == 0.0:
+            continue
+        for i in neighbors[p]:
+            if i == q:
+                continue
+            for l in neighbors[q]:
+                if l == p or l == i:
+                    continue
+                tup = (i, p, q, l)
+                key = min(tup, (l, q, p, i))
+                if key in seen_dih:
+                    continue
+                seen_dih.add(key)
+                dihedrals.append((i, p, q, l, v1, v2, v3))
+
+    one_four: set[tuple[int, int]] = set()
+    for i, _j, _k, l, *_ in dihedrals:
+        pair = (min(i, l), max(i, l))
+        if pair not in bonded_pairs and pair not in one_three:
+            one_four.add(pair)
+
+    # SHAKE is kept available for non-reactive runs, but presets now disable it
+    # by default. If enabled, X-H bonds cannot break.
+    shake_bonds = [
+        (i, j, r0)
+        for i, j, r0, _de, _alpha, *_ in bonds
+        if symbols[i] == "H" or symbols[j] == "H"
+    ]
+    bond_arrays = _bond_arrays(bonds)
+    angle_arrays = _angle_arrays(angles)
+    dihedral_arrays = _dihedral_arrays(dihedrals)
+
+    return Topology(
+        pos=pos,
+        masses=masses,
+        radii=radii,
+        symbols=symbols,
+        charges=charges,
+        bonds=bonds,
+        bonded_pairs=bonded_pairs,
+        one_three=one_three,
+        one_four=one_four,
+        angles=angles,
+        dihedrals=dihedrals,
+        shake_bonds=shake_bonds,
+        bond_i=bond_arrays[0],
+        bond_j=bond_arrays[1],
+        bond_r0=bond_arrays[2],
+        bond_de=bond_arrays[3],
+        bond_alpha=bond_arrays[4],
+        angle_i=angle_arrays[0],
+        angle_c=angle_arrays[1],
+        angle_j=angle_arrays[2],
+        angle_theta0=angle_arrays[3],
+        angle_k=angle_arrays[4],
+        dihedral_i=dihedral_arrays[0],
+        dihedral_j=dihedral_arrays[1],
+        dihedral_k=dihedral_arrays[2],
+        dihedral_l=dihedral_arrays[3],
+        dihedral_v1=dihedral_arrays[4],
+        dihedral_v2=dihedral_arrays[5],
+        dihedral_v3=dihedral_arrays[6],
+    )
+
+
+def _bond_arrays(
+    bonds: list[tuple[int, int, float, float, float, str, str]],
+) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    if not bonds:
+        return (
+            np.empty(0, dtype=np.int32),
+            np.empty(0, dtype=np.int32),
+            np.empty(0),
+            np.empty(0),
+            np.empty(0),
+        )
+    return (
+        np.array([item[0] for item in bonds], dtype=np.int32),
+        np.array([item[1] for item in bonds], dtype=np.int32),
+        np.array([item[2] for item in bonds], dtype=float),
+        np.array([item[3] for item in bonds], dtype=float),
+        np.array([item[4] for item in bonds], dtype=float),
+    )
+
+
+def _angle_arrays(
+    angles: list[tuple[int, int, int, float, float]],
+) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    if not angles:
+        return (
+            np.empty(0, dtype=np.int32),
+            np.empty(0, dtype=np.int32),
+            np.empty(0, dtype=np.int32),
+            np.empty(0),
+            np.empty(0),
+        )
+    return (
+        np.array([item[0] for item in angles], dtype=np.int32),
+        np.array([item[1] for item in angles], dtype=np.int32),
+        np.array([item[2] for item in angles], dtype=np.int32),
+        np.array([item[3] for item in angles], dtype=float),
+        np.array([item[4] for item in angles], dtype=float),
+    )
+
+
+def _dihedral_arrays(
+    dihedrals: list[tuple[int, int, int, int, float, float, float]],
+) -> tuple[
+    np.ndarray,
+    np.ndarray,
+    np.ndarray,
+    np.ndarray,
+    np.ndarray,
+    np.ndarray,
+    np.ndarray,
+]:
+    if not dihedrals:
+        return (
+            np.empty(0, dtype=np.int32),
+            np.empty(0, dtype=np.int32),
+            np.empty(0, dtype=np.int32),
+            np.empty(0, dtype=np.int32),
+            np.empty(0),
+            np.empty(0),
+            np.empty(0),
+        )
+    return (
+        np.array([item[0] for item in dihedrals], dtype=np.int32),
+        np.array([item[1] for item in dihedrals], dtype=np.int32),
+        np.array([item[2] for item in dihedrals], dtype=np.int32),
+        np.array([item[3] for item in dihedrals], dtype=np.int32),
+        np.array([item[4] for item in dihedrals], dtype=float),
+        np.array([item[5] for item in dihedrals], dtype=float),
+        np.array([item[6] for item in dihedrals], dtype=float),
+    )
 </file>
 
 <file path="notebook_md_rampa.ipynb">
