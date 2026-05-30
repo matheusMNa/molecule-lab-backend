@@ -59,7 +59,7 @@ PRESETS: dict[str, SimulationPreset] = {
     "fast": SimulationPreset(
         name="fast",
         temperature_start=298.15,
-        temperature_end=10_000.0,
+        temperature_end=100_000.0,
         n_steps=5_000,
         dt=0.10,  # fs
         gamma=0.05,  # fs^-1, strong thermostat for a fast heating ramp
@@ -81,7 +81,7 @@ PRESETS: dict[str, SimulationPreset] = {
     "balanced": SimulationPreset(
         name="balanced",
         temperature_start=298.15,
-        temperature_end=10_000.0,
+        temperature_end=100_000.0,
         n_steps=20_000,
         dt=0.05,  # fs
         gamma=0.05,  # fs^-1
@@ -103,7 +103,7 @@ PRESETS: dict[str, SimulationPreset] = {
     "debug": SimulationPreset(
         name="debug",
         temperature_start=298.15,
-        temperature_end=2_000.0,
+        temperature_end=100_000.0,
         n_steps=500,
         dt=0.10,  # fs
         gamma=0.05,  # fs^-1
